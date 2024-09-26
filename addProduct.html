@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Products</title>
+    <link rel="stylesheet" href="style/adding-style.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="sources/logo-shop.png" alt="logo">
+        <nav>
+          <a href="index.html">Acceuil</a>
+          <a href="addProduct.html">Ajouter des Produits</a>
+          <a href="listOfProducts.html">List Of Products</a>
+          
+        </nav>
+        <div class="searching">
+          <img class="icon-image" src="sources/search-icon.png" alt="search">
+          <input type="text" placeholder="Chercher">
+        </div>
+        <div class="panierquantity" >
+          <img class="panier" src="sources/panier.png" alt="panier">
+          <div class="quantity" ></div>
+          
+        </div>
+      </header>
+    
+    <div id="add-prod">
+        <div id="posi" >
+        <label>Name:</label>
+        <input class="input1" name="name-product" type="text"><br><br>
+        <label >Reférence:</label>
+        <input class="input2" name="reference" type="text"><br><br>
+        <label >Price:</label>
+        <input class="input3" name="price" type="text">DT</input><br><br>
+        <div>
+        <label >Image:</label>
+        <input class="input4" name="image" accept="image/*" type="file"><br>
+        <button id="sumbiting" >Add Product</button>
+        </div>
+    </div>
+</div>
+    <div style="display: none;" class="data" ></div>
+    <div class="image" ></div>
+
+    
+    <script src="data\products.js"></script>
+</body>
+</html>
