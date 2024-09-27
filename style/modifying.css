@@ -1,0 +1,123 @@
+
+
+/* Style the flat form */
+#productForm {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    margin: auto;
+    opacity: 1; /* Start with 0 opacity */
+    transition: opacity 0.7s ease; /* Transition for opacity only */
+    border: 1px solid #ddd; /* Flat border */
+}
+
+/* Animation for form */
+#productForm.show {
+    opacity: 1; /* Fade in when class "show" is added */
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input focus and hover */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+}
+
+/* Submit button styles */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Product Image */
+#productImage {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#productImage:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Output section styling */
+#output {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Fade in animation for output */
+#output p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for individual inputs */
+input,
+label {
+    opacity: 0;
+    animation: slideUp 0.5s forwards;
+}
+
+input:nth-child(1),
+label:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+input:nth-child(3),
+label:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+input:nth-child(5),
+label:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+input:nth-child(7) {
+    animation-delay: 0.8s;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

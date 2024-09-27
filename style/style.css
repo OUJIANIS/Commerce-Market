@@ -92,7 +92,24 @@ header {
     color: #333;
 }
 
-.product-item button {
+.green-button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #37c232;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.green-button:hover {
+    background-color: #20a114;
+}
+
+.red-button {
     margin-top: 10px;
     padding: 8px 15px;
     font-size: 14px;
@@ -105,7 +122,7 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.product-item button:hover {
+.red-button:hover {
     background-color: #ff2a1a;
 }
 

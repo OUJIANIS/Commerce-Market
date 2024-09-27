@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify</title>
+    <link rel="stylesheet" href="style/modifying.css">
+    <link rel="stylesheet" href="style/style.css">
+    
+</head>
+<body>
+    <header>
+        <img class="logo" src="sources/logo-shop.png" alt="logo">
+        <nav>
+          <a href="index.html">Acceuil</a>
+          <a href="addProduct.html">Ajouter des Produits</a>
+          <a href="listOfProducts.html">List Of Products</a>
+          
+        </nav>
+        <div class="searching">
+          <img class="icon-image" src="sources/search-icon.png" alt="search">
+          <input type="text" placeholder="Chercher">
+        </div>
+        <div class="panierquantity" >
+          <img class="panier" src="sources/panier.png" alt="panier">
+          <div class="quantity" ></div>
+          
+        </div>
+      </header>
+      <br>
+      <br><br><br><br>
+  <main class="modify-product" >
+    <form id="productForm">
+        <h1>Modifying</h1>
+        <!-- Text Input for Product Reference -->
+        <label for="productReference">Product Reference:</label>
+        <input type="text" id="productReference" name="productReference" value="12345-ABC"><br><br>
+
+
+        <!-- Input for Quantity -->
+        <label for="productQuantity">Product Quantity:</label>
+        <input type="number" id="productQuantity" name="productQuantity" value="1"><br><br>
+
+        <!-- Image Display -->
+        <label for="productImage">Product Image:</label><br>
+        <img id="productImage" src=".." alt="Product Image" width="300"><br><br>
+
+        <!-- File Input for Image Upload -->
+        <label for="imageUpload">Change Product Image:</label>
+        <input type="file" id="imageUpload" accept="image/*"><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Update Product">
+    </form>
+
+    <!-- Output Section -->
+    <div id="output"></div>
+
+    </main>
+ 
+<script type="module" src="data/modifyProducts.js"></script>
+<script src="https://momentjs.com/downloads/moment-with-locales.js" ></script>
+</body>
+</html>
