@@ -1,3 +1,5 @@
+
+
 const cart = JSON.parse(localStorage.getItem('produits')) || []; 
 
 // Build HTML string first, then insert it all at once
@@ -23,7 +25,7 @@ cart.forEach(element => {
         </div>
     `;
 });
-
+ 
 productsListElement.innerHTML = productHTML;
 
 // Event listener for delete buttons
@@ -43,15 +45,20 @@ deleteButtons.forEach(button => {
         button.closest('.product-item').remove(); 
     });
 });
-
+let productToModify ;
 // Event listener for modify buttons
 const modifyButtons = document.querySelectorAll('.modify-product-button');
 modifyButtons.forEach(button => {
-    const refToModify = button.dataset.refNumber;
-    const nameToModify = button.dataset.productName;
+    button.addEventListener('click', () => {
 
-    // filter the product object
-
+        const refToModify = button.dataset.refNumber;
+        const nameToModify = button.dataset.productName;
+    
+        // filter the product object
+        productToModify = cart.find(item => item.Ref === refToModify && item.Name === nameToModify);
+         console.log(productToModify);
+    })
 })
 
+const productForModify = document.querySelector('.modify-product');
 

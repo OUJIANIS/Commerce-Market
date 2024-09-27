@@ -1,15 +1,5 @@
+
 const cart = JSON.parse(localStorage.getItem('produits')) || [];
-
-
-
-
-
-
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('productForm');
